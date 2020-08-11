@@ -16,18 +16,8 @@ class  Tesla extends Car{
          public void getPrice(){  
              price=40000;              
         }  
-   }//end of Do
+   }
 
-
-
-
-   class  BMW extends Car{  
-   //@override   
-    public void getPrice(){   
-        price=50000;  
-   }  
-
-   } 
  
 
 class  Toyota extends Car{  
@@ -40,8 +30,7 @@ class  Toyota extends Car{
 
 
 class GetCarFactory{  
-      
-   //use getPlan method to get object of type Plan   
+       
        public Car getPlan(String carType){  
             if(carType == null){  
              return null;  
@@ -49,10 +38,8 @@ class GetCarFactory{
           if(carType.equalsIgnoreCase("TESLA")) {  
                  return new Tesla();  
                }   
-           else if(carType.equalsIgnoreCase("BMW")){  
-                return new BMW();  
-            }   
-          else if(carType.equalsIgnoreCase("Toyota")) {  
+   
+          else (carType.equalsIgnoreCase("Toyota")) {  
                 return new Toyota();  
           }  
       return null;  
